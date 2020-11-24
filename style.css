@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color:rgba(0, 0, 0, 0.803);
+    color: white;
+  }
+head{
+  background-color:rgba(0, 0, 0, 0.803);
+  color: white;
+}
+
+#list-back{
+  display:flex;
+  margin: auto;
+  justify-content: center;
+  align-items: left;
+  padding:10px;
+  list-style-type: none;
+}
+
+li{
+  display: inline-flex;
+  flex-direction: row;  
+  margin:auto;
+  padding:20px;
+}
+
+
+#user-input{
+  display:flex;
+  background-color: grey;
+  border: 1px black solid;
+  padding-top:5px;
+  padding-bottom:15px;
+  flex-wrap: wrap;
+}
+  #container-1{
+    display:flex;
+    margin: auto;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    width:80%;
+    height:40vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+  }
+
+  @media(max-width:850px){ 
+    #user-input{
+      display: flex;
+      border: 1px black solid;
+      padding:5px;
+      flex-wrap: wrap;
+      flex-direction: column;
+   }
+   #container-1{
+    display:flex;
+    margin: auto;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    width:95%;
+    height:30vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  #list-back{
+    display: flex; 
+  }
+  ul{
+    flex:1;
+  /*  align-items: flex-start;*/
+    list-style-type: none;
+  }
+  li{
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    padding:5px;
+  }
+  }
+
+  #chartContainer{
+    display: flex;
+    margin: auto;
+    border-radius: 20px;
+    height:50vh;
+    width: 80%;
+    padding-bottom: 20px;
+    margin-bottom: 50em;
+  }
+.canvasjs-chart-canvas{
+  border-radius: 20px;
+}
+.canvasColorR{
+ background-image: black;
+ background: black;
+}
+.canvasColorG{
+  background-image: linear-gradient(rgb(4, 68, 8) 30%, rgb(4, 37, 6) );
+ }
+#chart_canvas{
+  flex:1;
+  align-items: center;
+}
+
+#error-msg{
+  color:red;
+  font-style: italic;
+}

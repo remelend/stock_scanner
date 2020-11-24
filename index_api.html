@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Scanner stock </title>
+    <link rel="stylesheet" href="style.css">
+    <script src = "https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.stock.min.js"></script>
+ 
+</head>
+<body>
+<header>
+    <h1 id="title">Project : Stock Scanner</h1>
+</header>
+
+<h3> Look up stock by symbol </h3>
+
+<form id = "user-input">
+    <div>
+        <label for='symbol'>Symbol : </label>
+    </div>
+    <div>
+        <input type="text" name='symbol' id='symbol' class="inputs" list="datalist" required>
+        <div id="error-msg"></div>
+        <datalist id='datalist'>
+            <option value='MSFT'></option>
+            <option value="AAPL"></option>
+        </datalist>
+    </div>
+    <div>
+        <label for='time'>Time :</label>
+    </div>
+    <div>
+        <select name="time" id='time' class="inputs" required>
+            <option value=""></option>
+            <option value="1 day">1 Day</option>
+            <option value="5 days">5 Days</option> 
+            <option value="1 month">1 Month</option>
+            <option value="3 months">3 Months</option>
+        </select>
+    </div>
+    <div>
+        <label for='graph'>Graph Style :</label>
+    </div>
+    <div>
+        <select name="graph" id='graph' class="inputs" required>
+            <option value=""></option>
+            <option value="line">Line</option>
+            <option value="candlestick">Candlestick</option>
+        </select>
+    </div>
+    <div>
+        <input class='btn' type='submit' class="inputs" value="Submit">
+    </div>
+</form>
+
+
+<div id="list-back">
+<ul id="items">
+    <li id="symbol"></li>
+    <li id="open"></li>
+    <li id="high"></li>
+    <li id="low"></li>
+    <li id="low"></li>
+</ul>
+</div>
+<div id="holder">
+<div id="container-1" class="canvasColor">
+    <canvas id="chart_canvas"></canvas>
+</div>
+</div>
+
+<div id="chartContainer"></div>
+
+<script src="main_api.js"></script>
+</body>
+
+
+</html>
